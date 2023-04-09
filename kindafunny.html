@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Black Hair in Video Games</title>
+        <style>
+            .default-mode {
+                    background-color: white;
+                    color: black;
+                }
+            .dark-mode {
+                    background-color: black;
+                    color: white;
+                }
+            .hacker-mode {
+                    background-color: black;
+                    color: #39FF14;
+                }
+            .calvin-mode {
+                    background-color: black;
+                    color: cyan;
+                }
+            body{background-color: white; color:black; text-align: center; margin: 50px 100px;}
+        </style>
+    </head>
+    <body onload="toggler('default-mode')">
+        <p>
+            <strong>Fashion is an outlet to put your identity on display, and when representation is neglected through implicit racism and personal biases of corporations and media they are directly discriminating against minority groups.</strong><br>
+            <br>
+            The limitation of adequate black hairstyles exemplifies the lack of diversity in larger companies in the video game industry.<br>
+            <br>
+            Discrimination against black hair is a prevalent issue that is often ignored by broader communities.<br>
+            <br>
+            Bringing representation to minority groups in major media is uplifting and aids in the battle for equity.<br>
+            <br>
+            The history of Western beauty standards discriminates and censors people of color from being true to themselves and their culture. <br>
+            <br>
+            What are some examples of media getting the representation of black hair and styles right? What did they do differently?<br>
+            <br>
+            What steps are required to begin moving towards a better representation of people of color in media?<br>
+            <br>
+            Media intentionally excludes ethnic styles to better fit their ideal audience and aesthetic for personal gain.<br>
+            <br>
+            Although it takes extra effort to properly simulate black hair in video games, the lack of representation makes it evident that they do not care enough to do the extra work.<br>
+            <br><br>
+            <i>Cycle through page styles using keys 1, 2, 3, 4</i>
+        </p>
+        <script>
+            let cur_mode = "default-mode"
+            document.addEventListener('keydown', keybind);
+            
+            function toggler(mode) 
+            {
+                document.body.classList.toggle(cur_mode);
+                document.body.classList.toggle(mode);
+                cur_mode = mode
+            }
+
+            function keybind()
+            {
+              switch (event.key) {
+                case "1":
+                  toggler("default-mode") ;
+                  break ;
+                case "2":
+                  toggler("dark-mode") ;
+                  break ;
+                case "3":
+                  toggler("hacker-mode") ;
+                  break ;
+                case "4":
+                  toggler("calvin-mode") ;
+                  break ;
+               }
+            }
+        </script>
+    </body>
+</html>

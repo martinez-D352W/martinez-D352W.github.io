@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HUD Response</title>
+        <style>
+            .default-mode {
+                    background-color: white;
+                    color: black;
+                }
+            .dark-mode {
+                    background-color: black;
+                    color: white;
+                }
+            .hacker-mode {
+                    background-color: black;
+                    color: #39FF14;
+                }
+            .calvin-mode {
+                    background-color: black;
+                    color: cyan;
+                }
+            body{background-color: white; color:black; text-align: center; margin: 50px 100px;}
+        </style>
+    </head>
+    <body onload="toggler('default-mode')">
+        <p>
+            <strong> The settlement agreement between the Justice Department and Meta Platforms displays the ethical dilemma of balancing free speech with preventing discrimination in online advertising.</strong><br>
+            <br>
+            Discriminatory advertising practices raise serious ethical concerns about the role of technology companies in perpetuating systemic biases and contribute to social inequality.<br>
+            <br>
+            Greater transparency and accountability in designing and deploying algorithmic systems is imperative in the creation of ethical algorithms.<br>
+            <br>
+            How might the Housing Department's charge against Facebook impact the broader tech industry?<br>
+            <br>
+            What implications might this have for the way we think about the ethical responsibilities of tech companies in society?<br>
+            <br>
+            Tech companies must take responsibility for ensuring their platforms do not perpetuate discrimination in any form.<br>
+            <br>
+            What role do technology companies play in combatting systemic discrimination in society?<br>
+            <br>
+            Greater oversight and regulation of digital advertising can aid in ensuring they do not violate discriminatory practice laws.<br>
+            <br>
+            There is a necessity for more robust regulatory measures protecting vulnerable communities from harm through discriminatory actions involving technology.<br>
+            <br>
+            What role can consumers play in advocating for more ethical and responsible practices in digital advertising?<br>
+            <br>
+            How can we ensure that our voices are heard in discussions about these important issues?<br>            
+            <br><br>
+            <i>Cycle through page styles using keys 1, 2, 3, 4</i>
+        </p>
+        <script>
+            let cur_mode = "default-mode"
+            document.addEventListener('keydown', keybind);
+            
+            function toggler(mode) 
+            {
+                document.body.classList.toggle(cur_mode);
+                document.body.classList.toggle(mode);
+                cur_mode = mode
+            }
+
+            function keybind()
+            {
+              switch (event.key) {
+                case "1":
+                  toggler("default-mode") ;
+                  break ;
+                case "2":
+                  toggler("dark-mode") ;
+                  break ;
+                case "3":
+                  toggler("hacker-mode") ;
+                  break ;
+                case "4":
+                  toggler("calvin-mode") ;
+                  break ;
+              }
+            }
+        </script>
+    </body>
+</html>
